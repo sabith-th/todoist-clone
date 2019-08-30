@@ -4,8 +4,5 @@
   ],
   "eslint.autoFixOnSave": true,
   "editor.formatOnSave": true,
-  "[javascript]": {
-    "editor.formatOnSave": false
-  },
   "editor.formatOnSaveTimeout": 4000
 }
