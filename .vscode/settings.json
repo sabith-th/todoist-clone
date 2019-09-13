@@ -4,5 +4,6 @@
   ],
   "eslint.autoFixOnSave": true,
   "editor.formatOnSave": true,
-  "editor.formatOnSaveTimeout": 4000
+  "editor.formatOnSaveTimeout": 4000,
+  "prettier-eslint.eslintIntegration": true
 }
