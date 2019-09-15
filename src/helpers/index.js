@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import collatedTasks from '../constants';
 
-export const getTitle = (projects, projectId) => projects.find((project) => project.id === projectId);
+export const getTitle = (projects, projectId) => projects.find((project) => project.projectId === projectId);
 
 export const getCollatedTitle = (projects, key) => projects.find((project) => project.key === key);
 

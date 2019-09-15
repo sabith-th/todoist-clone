@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState } from 'react';
 import {
   FaChevronDown,
@@ -10,7 +13,7 @@ import AddProject from '../AddProject';
 import Projects from '../Projects';
 
 const SideBar = () => {
-  const { selectedProject } = useSelectedProjectValue();
+  const { setSelectedProject } = useSelectedProjectValue();
   const [active, setActive] = useState('inbox');
   const [showProjects, setShowProjects] = useState(true);
 
@@ -20,6 +23,10 @@ const SideBar = () => {
         <li
           data-testid="inbox"
           className={active === 'inbox' ? 'active' : undefined}
+          onClick={() => {
+            setActive('inbox');
+            setSelectedProject('INBOX');
+          }}
         >
           <span>
             <FaInbox />
@@ -29,6 +36,10 @@ const SideBar = () => {
         <li
           data-testid="today"
           className={active === 'today' ? 'active' : undefined}
+          onClick={() => {
+            setActive('today');
+            setSelectedProject('TODAY');
+          }}
         >
           <span>
             <FaRegCalendar />
@@ -38,6 +49,10 @@ const SideBar = () => {
         <li
           data-testid="next_7"
           className={active === 'next_7' ? 'active' : undefined}
+          onClick={() => {
+            setActive('next_7');
+            setSelectedProject('NEXT_7');
+          }}
         >
           <span>
             <FaRegCalendarAlt />
@@ -45,9 +60,14 @@ const SideBar = () => {
           </span>
         </li>
       </ul>
-      <div className="sidebar__middle">
+      <div
+        className="sidebar__middle"
+        onClick={() => setShowProjects(!showProjects)}
+      >
         <span>
-          <FaChevronDown />
+          <FaChevronDown
+            className={!showProjects ? 'hidden-projects' : undefined}
+          />
         </span>
         <h2>Project</h2>
       </div>

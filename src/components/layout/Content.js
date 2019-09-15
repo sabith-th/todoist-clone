@@ -3,7 +3,7 @@ import Tasks from '../Tasks';
 import SideBar from './SideBar';
 
 const Content = () => (
-  <section>
+  <section className="content">
     <SideBar />
     <Tasks />
   </section>
