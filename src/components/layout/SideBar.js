@@ -28,10 +28,12 @@ const SideBar = () => {
             setSelectedProject('INBOX');
           }}
         >
-          <span>
-            <FaInbox />
-          </span>
-          <span>Inbox</span>
+          <div>
+            <span>
+              <FaInbox />
+            </span>
+            <span>Inbox</span>
+          </div>
         </li>
         <li
           data-testid="today"
@@ -41,10 +43,12 @@ const SideBar = () => {
             setSelectedProject('TODAY');
           }}
         >
-          <span>
-            <FaRegCalendar />
+          <div>
+            <span>
+              <FaRegCalendar />
+            </span>
             <span>Today</span>
-          </span>
+          </div>
         </li>
         <li
           data-testid="next_7"
@@ -54,10 +58,12 @@ const SideBar = () => {
             setSelectedProject('NEXT_7');
           }}
         >
-          <span>
-            <FaRegCalendarAlt />
+          <div>
+            <span>
+              <FaRegCalendarAlt />
+            </span>
             <span>Next 7 Days</span>
-          </span>
+          </div>
         </li>
       </ul>
       <div
