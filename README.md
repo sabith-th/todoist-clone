@@ -1,3 +1,7 @@
+# Todoist Clone
+
+This project was done by following the tutorial from [Karl Hadwen](https://www.youtube.com/watch?v=HgfA4W_VjmI)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
